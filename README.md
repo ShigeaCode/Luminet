@@ -1,1 +1,1 @@
-# Luminet
+Luminet Testing Environment
