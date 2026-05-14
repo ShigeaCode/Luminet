@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luminet Electric Engineering – Professional Electrical Services in KL</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="Images/Logo.ico">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -58,6 +59,7 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .nav-logo-icon {
@@ -1170,21 +1172,18 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" onclick="showPage('home')">
-    <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="18" cy="18" r="17" stroke="#C9A84C" stroke-width="1"/>
-      <path d="M14 8L10 19H16L12 28L26 15H19L23 8H14Z" fill="#C9A84C"/>
-    </svg>
+  <a class="nav-logo" href="index.html">
+    <img src="Images/LuminetIcon.png" alt="Luminet Icon" class="nav-logo-icon">
     <div class="nav-logo-text">
       <span class="nav-logo-main">LUMINET</span>
       <span class="nav-logo-sub">Electric Engineering</span>
     </div>
   </a>
   <ul class="nav-links">
-    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
-    <li><a onclick="showPage('about')" id="nav-about">About Us</a></li>
-    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
-    <li><a onclick="showPage('contact')" id="nav-contact" class="nav-cta">Contact Us</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -1193,45 +1192,30 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-  <a onclick="mobileNav('home')" id="mob-nav-home" class="active">Home</a>
-  <a onclick="mobileNav('about')" id="mob-nav-about">About Us</a>
-  <a onclick="mobileNav('services')" id="mob-nav-services">Services</a>
-  <a onclick="mobileNav('contact')" class="mobile-cta">Contact Us</a>
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html" class="mobile-cta">Contact Us</a>
 </div>
 
 <!-- ═══ HOME PAGE ═══ -->
-<div id="page-home" class="page active">
+<div class="page active" style="display: block;">
   <section class="hero">
     <video class="hero-bg" autoplay muted loop playsinline webkit-playsinline x5-playsinline>
-      <source src="Videos/AbstractYellowBg.mp4" type="video/mp4">
+      <source src="Videos/GoldenAbtractBackground.mp4" type="video/mp4">
     </video>
-    <div class="hero-grid"></div>
+    <!-- <div class="hero-grid"></div> -->
     <div class="hero-content">
       <div class="hero-tag">Malaysia's Trusted Electricians</div>
       <h1 class="hero-title">
         Powering Your World<span>with Precision.</span>
       </h1>
-      <!-- <p class="hero-subtitle-italic">Electrical wiring, smart installations & renovation solutions</p> -->
       <p class="hero-desc">
         From residential wiring to CCTV systems and alarm installations, Luminet Electric Engineering delivers certified, reliable electrical services across Kuala Lumpur and the surrounding areas.
       </p>
       <div class="hero-actions">
-        <a class="btn-primary" onclick="showPage('contact')">Get a Free Quote</a>
-        <a class="btn-outline" onclick="showPage('services')">Our Services</a>
-      </div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">10+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">500+</div>
-        <div class="stat-label">Projects Done</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Certified Work</div>
+        <a class="btn-primary" href="contact.html">Get a Free Quote</a>
+        <a class="btn-outline" href="services.html">Our Services</a>
       </div>
     </div>
   </section>
@@ -1239,14 +1223,14 @@
   <section class="services-strip">
     <div class="strip-title">What We Do</div>
     <div class="strip-grid">
-      <div class="strip-item" onclick="showPage('services')">
+      <div class="strip-item" onclick="location.href='services.html'">
         <svg class="strip-icon" viewBox="0 0 42 42" fill="none">
           <rect x="1" y="1" width="40" height="40" rx="8" stroke="#C9A84C" stroke-width="0.75" fill="none"/>
           <path d="M21 10L17 22H22L18 32L30 19H24L28 10H21Z" fill="#C9A84C"/>
         </svg>
         <span class="strip-name">Electrical Wiring</span>
       </div>
-      <div class="strip-item" onclick="showPage('services')">
+      <div class="strip-item" onclick="location.href='services.html'">
         <svg class="strip-icon" viewBox="0 0 42 42" fill="none">
           <rect x="1" y="1" width="40" height="40" rx="8" stroke="#C9A84C" stroke-width="0.75" fill="none"/>
           <circle cx="21" cy="19" r="7" stroke="#C9A84C" stroke-width="1.5"/>
@@ -1258,7 +1242,7 @@
         </svg>
         <span class="strip-name">CCTV Installation</span>
       </div>
-      <div class="strip-item" onclick="showPage('services')">
+      <div class="strip-item" onclick="location.href='services.html'">
         <svg class="strip-icon" viewBox="0 0 42 42" fill="none">
           <rect x="1" y="1" width="40" height="40" rx="8" stroke="#C9A84C" stroke-width="0.75" fill="none"/>
           <rect x="13" y="14" width="16" height="11" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
@@ -1269,7 +1253,7 @@
         </svg>
         <span class="strip-name">Alarm Systems</span>
       </div>
-      <div class="strip-item" onclick="showPage('services')">
+      <div class="strip-item" onclick="location.href='services.html'">
         <svg class="strip-icon" viewBox="0 0 42 42" fill="none">
           <rect x="1" y="1" width="40" height="40" rx="8" stroke="#C9A84C" stroke-width="0.75" fill="none"/>
           <rect x="9" y="18" width="24" height="14" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
@@ -1279,7 +1263,7 @@
         </svg>
         <span class="strip-name">Renovation Works</span>
       </div>
-      <div class="strip-item" onclick="showPage('services')">
+      <div class="strip-item" onclick="location.href='services.html'">
         <svg class="strip-icon" viewBox="0 0 42 42" fill="none">
           <rect x="1" y="1" width="40" height="40" rx="8" stroke="#C9A84C" stroke-width="0.75" fill="none"/>
           <rect x="9" y="12" width="24" height="18" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
@@ -1290,7 +1274,7 @@
         </svg>
         <span class="strip-name">DB Box & Panel</span>
       </div>
-      <div class="strip-item" onclick="showPage('services')">
+      <div class="strip-item" onclick="location.href='services.html'">
         <svg class="strip-icon" viewBox="0 0 42 42" fill="none">
           <rect x="1" y="1" width="40" height="40" rx="8" stroke="#C9A84C" stroke-width="0.75" fill="none"/>
           <circle cx="21" cy="21" r="10" stroke="#C9A84C" stroke-width="1.5"/>
@@ -1304,7 +1288,7 @@
   <div class="cta-band">
     <h2>Ready to Work With <span>Luminet?</span></h2>
     <p>Contact us today for a free consultation and quote. We serve residential, commercial, and industrial clients across Kuala Lumpur.</p>
-    <a class="btn-primary" onclick="showPage('contact')">Get in Touch</a>
+    <a class="btn-primary" href="contact.html">Get in Touch</a>
   </div>
 
   <footer>
@@ -1317,498 +1301,10 @@
       <div>
         <div class="footer-col-title">Navigation</div>
         <ul class="footer-links">
-          <li><a onclick="showPage('home')">Home</a></li>
-          <li><a onclick="showPage('about')">About Us</a></li>
-          <li><a onclick="showPage('services')">Services</a></li>
-          <li><a onclick="showPage('contact')">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Contact</div>
-        <ul class="footer-links">
-          <li><a>Ong — 012-330282</a></li>
-          <li><a>Kuala Lumpur, Malaysia</a></li>
-          <li><a>Mon – Sat, 8am – 6pm</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Luminet Electric Engineering. All rights reserved.</span>
-      <span class="footer-reg">Electrical Contractor · Kuala Lumpur</span>
-    </div>
-  </footer>
-</div>
-
-<!-- ═══ ABOUT PAGE ═══ -->
-<div id="page-about" class="page">
-  <div class="page-hero">
-    <div class="page-hero-tag">Who We Are</div>
-    <h1 class="page-hero-title">About Luminet Electric Engineering</h1>
-    <div class="page-hero-line"></div>
-  </div>
-
-  <section class="about-section">
-    <div class="about-layout">
-      <div class="about-text">
-        <h2>Built on <em>Trust</em>, Wired for Excellence</h2>
-        <p>Luminet Electric Engineering is a Kuala Lumpur-based electrical contracting company specialising in residential, commercial, and light industrial electrical works. We have been serving clients across the Klang Valley with a commitment to safety, quality, and reliability.</p>
-        <p>From a simple wiring job to a full-scale renovation project, our team brings the same level of professionalism and attention to detail to every engagement. We are licensed and fully certified, ensuring all our work complies with Malaysian electrical standards and regulations.</p>
-        <p>Whether you're a homeowner looking to upgrade your electrical system, a business needing CCTV and alarm installation, or a developer requiring complete electrical fit-out for a new project — Luminet is your trusted partner.</p>
-      </div>
-      <div class="about-visual">
-        <div class="about-card">
-          <div class="about-card-header">
-            <div class="about-badge">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L9 10H3L8 15L6 22L12 17L18 22L16 15L21 10H15L12 2Z" fill="#C9A84C"/>
-              </svg>
-            </div>
-            <div>
-              <div class="about-card-title">Our Core Values</div>
-              <div class="about-card-sub">What drives every job we do</div>
-            </div>
-          </div>
-          <ul class="value-list">
-            <li>
-              <div class="value-dot"></div>
-              <div>
-                <span class="value-label">Safety First</span>
-                All work follows strict Malaysian electrical safety codes and standards.
-              </div>
-            </li>
-            <li>
-              <div class="value-dot"></div>
-              <div>
-                <span class="value-label">Reliability</span>
-                We show up on time and complete projects within the agreed schedule.
-              </div>
-            </li>
-            <li>
-              <div class="value-dot"></div>
-              <div>
-                <span class="value-label">Transparency</span>
-                Clear, honest quotations with no hidden costs or surprises.
-              </div>
-            </li>
-            <li>
-              <div class="value-dot"></div>
-              <div>
-                <span class="value-label">Quality Workmanship</span>
-                Every installation is done right the first time, guaranteed.
-              </div>
-            </li>
-            <li>
-              <div class="value-dot"></div>
-              <div>
-                <span class="value-label">Customer Focus</span>
-                Your satisfaction is the measure of our success on every project.
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-section">
-    <div class="section-header">
-      <h2>Why Choose <span>Luminet?</span></h2>
-      <div class="section-divider"></div>
-      <p>We combine technical expertise with genuine care for our clients — making us the preferred choice for electrical works in KL.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M16 4L13 14H5L12 19L9 29L16 23L23 29L20 19L27 14H19L16 4Z" fill="#C9A84C" opacity="0.85"/>
-          </svg>
-        </div>
-        <div class="pillar-title">Certified Team</div>
-        <p class="pillar-text">All our electricians are fully licensed and regularly trained on the latest safety codes and installation techniques.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <circle cx="16" cy="16" r="11" stroke="#C9A84C" stroke-width="1.5"/>
-            <path d="M16 9V16L21 21" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="pillar-title">On-Time Delivery</div>
-        <p class="pillar-text">We respect your schedule. Projects are planned thoroughly and completed within the promised timeframe every time.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect x="5" y="8" width="22" height="16" rx="3" stroke="#C9A84C" stroke-width="1.5"/>
-            <path d="M10 16L14 20L22 12" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="pillar-title">Guaranteed Work</div>
-        <p class="pillar-text">We stand behind every job. Our installations are covered with a workmanship warranty for your peace of mind.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M8 12H24M8 16H20M8 20H16" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="4" y="6" width="24" height="20" rx="3" stroke="#C9A84C" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <div class="pillar-title">Clear Quotations</div>
-        <p class="pillar-text">Detailed, itemised quotes before any work begins. No hidden charges — just straightforward, honest pricing.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">LUMINET ELECTRIC ENGINEERING</div>
-        <div class="footer-brand-sub">Kuala Lumpur, Malaysia</div>
-        <p class="footer-brand-desc">Professional electrical wiring, installation, CCTV, alarm systems, and renovation services delivered with precision and care.</p>
-      </div>
-      <div>
-        <div class="footer-col-title">Navigation</div>
-        <ul class="footer-links">
-          <li><a onclick="showPage('home')">Home</a></li>
-          <li><a onclick="showPage('about')">About Us</a></li>
-          <li><a onclick="showPage('services')">Services</a></li>
-          <li><a onclick="showPage('contact')">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Contact</div>
-        <ul class="footer-links">
-          <li><a>Ong — 012-330282</a></li>
-          <li><a>Kuala Lumpur, Malaysia</a></li>
-          <li><a>Mon – Sat, 8am – 6pm</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Luminet Electric Engineering. All rights reserved.</span>
-      <span class="footer-reg">Electrical Contractor · Kuala Lumpur</span>
-    </div>
-  </footer>
-</div>
-
-<!-- ═══ SERVICES PAGE ═══ -->
-<div id="page-services" class="page">
-  <div class="page-hero">
-    <div class="page-hero-tag">What We Offer</div>
-    <h1 class="page-hero-title">Our Services</h1>
-    <div class="page-hero-line"></div>
-  </div>
-
-  <section class="services-section">
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-card-banner"></div>
-        <div class="service-card-body">
-          <div class="service-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <path d="M13 3L10 12H4L9 17L7 23L13 18L19 23L17 17L22 12H16L13 3Z" fill="#C9A84C"/>
-            </svg>
-          </div>
-          <div class="service-title">Electrical Wiring & Installation</div>
-          <p class="service-desc">Complete electrical wiring solutions for new builds, renovations, and rewiring projects. All work is carried out to Malaysian Standards (MS IEC 60364) by certified electricians.</p>
-          <ul class="service-features">
-            <li>New residential & commercial wiring</li>
-            <li>Rewiring of existing properties</li>
-            <li>Socket, switch & light point installation</li>
-            <li>Outdoor & garden lighting wiring</li>
-            <li>3-phase power supply installation</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-banner"></div>
-        <div class="service-card-body">
-          <div class="service-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <circle cx="13" cy="12" r="6" stroke="#C9A84C" stroke-width="1.5"/>
-              <circle cx="13" cy="12" r="2" fill="#C9A84C"/>
-              <line x1="13" y1="4" x2="13" y2="2" stroke="#C9A84C" stroke-width="1.5"/>
-              <line x1="20" y1="12" x2="22" y2="12" stroke="#C9A84C" stroke-width="1.5"/>
-              <rect x="7" y="19" width="12" height="5" rx="1" stroke="#C9A84C" stroke-width="1.2"/>
-            </svg>
-          </div>
-          <div class="service-title">CCTV Installation</div>
-          <p class="service-desc">Keep your home or business secure with professional CCTV installation. We supply, install, and configure complete surveillance systems tailored to your needs.</p>
-          <ul class="service-features">
-            <li>HD & IP camera supply and installation</li>
-            <li>Indoor and outdoor camera systems</li>
-            <li>DVR/NVR setup and configuration</li>
-            <li>Remote viewing via smartphone</li>
-            <li>Maintenance and troubleshooting</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-banner"></div>
-        <div class="service-card-body">
-          <div class="service-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <path d="M13 3C8.9 6.2 6 9.8 6 13.5C6 18 9 21 13 21C17 21 20 18 20 13.5C20 9.8 17.1 6.2 13 3Z" stroke="#C9A84C" stroke-width="1.5"/>
-              <line x1="13" y1="10" x2="13" y2="15" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="13" cy="17" r="1.2" fill="#C9A84C"/>
-              <line x1="10" y1="23" x2="16" y2="23" stroke="#C9A84C" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="service-title">Alarm System Installation</div>
-          <p class="service-desc">Protect your property with reliable alarm systems. From basic intruder alarms to full smart-home integrated security setups, we handle the complete installation.</p>
-          <ul class="service-features">
-            <li>Intruder & burglar alarm systems</li>
-            <li>Motion sensor installation</li>
-            <li>Door & window magnetic sensors</li>
-            <li>Siren and alert module setup</li>
-            <li>GSM & smart alarm integration</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-banner"></div>
-        <div class="service-card-body">
-          <div class="service-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <rect x="4" y="8" width="18" height="14" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
-              <path d="M9 8V6C9 4.9 9.9 4 11 4H15C16.1 4 17 4.9 17 6V8" stroke="#C9A84C" stroke-width="1.5"/>
-              <line x1="13" y1="13" x2="13" y2="17" stroke="#C9A84C" stroke-width="1.5"/>
-              <circle cx="13" cy="13" r="1.5" fill="#C9A84C"/>
-            </svg>
-          </div>
-          <div class="service-title">DB Box & Switchboard</div>
-          <p class="service-desc">Professional installation, upgrading, and maintenance of distribution boards and switchboards for residential and commercial properties.</p>
-          <ul class="service-features">
-            <li>New DB box installation</li>
-            <li>MCB and ELCB replacement</li>
-            <li>Consumer unit upgrades</li>
-            <li>Earthing & bonding works</li>
-            <li>Load balancing & circuit labelling</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-banner"></div>
-        <div class="service-card-body">
-          <div class="service-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <rect x="3" y="4" width="20" height="18" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
-              <line x1="3" y1="10" x2="23" y2="10" stroke="#C9A84C" stroke-width="1"/>
-              <rect x="7" y="14" width="5" height="5" rx="1" stroke="#C9A84C" stroke-width="1"/>
-              <rect x="14" y="14" width="5" height="2" rx="0.5" stroke="#C9A84C" stroke-width="1"/>
-              <rect x="14" y="18" width="5" height="1" rx="0.5" stroke="#C9A84C" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="service-title">Renovation Electrical Works</div>
-          <p class="service-desc">Supporting renovation projects of all sizes with complete electrical works coordination. We work closely with contractors, interior designers, and property owners.</p>
-          <ul class="service-features">
-            <li>Full electrical fit-out for renovations</li>
-            <li>Lighting design & installation</li>
-            <li>Air-conditioning power points</li>
-            <li>Kitchen & bathroom electrical works</li>
-            <li>Office and retail fit-out</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-banner"></div>
-        <div class="service-card-body">
-          <div class="service-icon-wrap">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <circle cx="13" cy="13" r="10" stroke="#C9A84C" stroke-width="1.5"/>
-              <path d="M13 7V13L17 17" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="service-title">Maintenance & Repair</div>
-          <p class="service-desc">Fast-response electrical maintenance and repair services. Whether it's a tripped breaker, faulty wiring, or a complete system fault, our team is ready to help.</p>
-          <ul class="service-features">
-            <li>Electrical fault diagnosis</li>
-            <li>Wiring repair & replacement</li>
-            <li>Tripped MCB & ELCB rectification</li>
-            <li>Power failure troubleshooting</li>
-            <li>Preventive maintenance scheduling</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="cta-band">
-    <h2>Need a <span>Custom Solution?</span></h2>
-    <p>Every project is unique. Get in touch with our team for a personalised consultation and competitive quote tailored to your requirements.</p>
-    <a class="btn-primary" onclick="showPage('contact')">Get in Touch</a>
-  </div>
-
-  <footer>
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">LUMINET ELECTRIC ENGINEERING</div>
-        <div class="footer-brand-sub">Kuala Lumpur, Malaysia</div>
-        <p class="footer-brand-desc">Professional electrical wiring, installation, CCTV, alarm systems, and renovation services delivered with precision and care.</p>
-      </div>
-      <div>
-        <div class="footer-col-title">Navigation</div>
-        <ul class="footer-links">
-          <li><a onclick="showPage('home')">Home</a></li>
-          <li><a onclick="showPage('about')">About Us</a></li>
-          <li><a onclick="showPage('services')">Services</a></li>
-          <li><a onclick="showPage('contact')">Contact Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Contact</div>
-        <ul class="footer-links">
-          <li><a>Ong — 012-330282</a></li>
-          <li><a>Kuala Lumpur, Malaysia</a></li>
-          <li><a>Mon – Sat, 8am – 6pm</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Luminet Electric Engineering. All rights reserved.</span>
-      <span class="footer-reg">Electrical Contractor · Kuala Lumpur</span>
-    </div>
-  </footer>
-</div>
-
-<!-- ═══ CONTACT PAGE ═══ -->
-<div id="page-contact" class="page">
-  <div class="page-hero">
-    <div class="page-hero-tag">Reach Us</div>
-    <h1 class="page-hero-title">Contact Us</h1>
-    <div class="page-hero-line"></div>
-  </div>
-
-  <section class="contact-section">
-    <div class="contact-layout">
-      <div class="contact-info">
-        <h2>Let's Talk About <span>Your Project</span></h2>
-        <p>Whether you need a quote, have questions about our services, or want to discuss a renovation project, we'd love to hear from you. Reach out and we'll get back to you promptly.</p>
-
-        <div class="contact-blocks">
-          <div class="contact-block">
-            <div class="contact-block-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M4 4C4 3.4 4.4 3 5 3H8L10 8L7.5 9.5C8.5 11.5 9.5 12.5 11.5 13.5L13 11L18 13V16C18 16.6 17.6 17 17 17C9.3 17 3 10.7 3 3V3C3 3.4 3.4 4 4 4Z" stroke="#C9A84C" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <div>
-              <div class="contact-block-label">Contact Person</div>
-              <div class="contact-block-value">Ong</div>
-              <div class="contact-block-sub">012-330282 &nbsp;·&nbsp; Call or WhatsApp</div>
-            </div>
-          </div>
-
-          <div class="contact-block">
-            <div class="contact-block-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M10 2C7 2 4.5 4.5 4.5 7.5C4.5 11.5 10 18 10 18C10 18 15.5 11.5 15.5 7.5C15.5 4.5 13 2 10 2Z" stroke="#C9A84C" stroke-width="1.5"/>
-                <circle cx="10" cy="7.5" r="2" stroke="#C9A84C" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <div>
-              <div class="contact-block-label">Location</div>
-              <div class="contact-block-value">Kuala Lumpur</div>
-              <div class="contact-block-sub">Serving Klang Valley & Selangor</div>
-            </div>
-          </div>
-
-          <div class="contact-block">
-            <div class="contact-block-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="7" stroke="#C9A84C" stroke-width="1.5"/>
-                <path d="M10 6V10L13 13" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div>
-              <div class="contact-block-label">Operating Hours</div>
-              <div class="contact-block-value">Monday – Saturday</div>
-              <div class="contact-block-sub">8:00 AM – 6:00 PM</div>
-            </div>
-          </div>
-
-          <div class="contact-block">
-            <div class="contact-block-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <rect x="3" y="4" width="14" height="12" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
-                <path d="M3 7L10 12L17 7" stroke="#C9A84C" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <div>
-              <div class="contact-block-label">Response Time</div>
-              <div class="contact-block-value">Within 24 Hours</div>
-              <div class="contact-block-sub">Urgent jobs accommodated</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <form action="https://formspree.io/f/xykolwpa" method="POST" class="contact-form-wrap" id="contactForm">
-        <div class="form-title">Send an Enquiry</div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="Ahmad bin Ali" name="name" required>
-          </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="012-345 6789" name="phone" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="your@email.com" name="email" required>
-        </div>
-        <div class="form-group">
-          <label>Service Required</label>
-          <select name="service" required>
-            <option value="">Select a service...</option>
-            <option>Electrical Wiring & Installation</option>
-            <option>CCTV Installation</option>
-            <option>Alarm System Installation</option>
-            <option>DB Box & Switchboard</option>
-            <option>Renovation Electrical Works</option>
-            <option>Maintenance & Repair</option>
-            <option>Other / Not Sure</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Project Location</label>
-          <input type="text" placeholder="e.g. Ampang, Kuala Lumpur" name="location" required>
-        </div>
-        <div class="form-group">
-          <label>Message / Details</label>
-          <textarea placeholder="Please describe your project..." name="message" required></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Enquiry</button>
-        <div class="form-success" id="form-success" style="display:none;">
-          Thank you! Your enquiry has been sent. Ong will contact you shortly.
-        </div>
-      </form>
-    </div><!-- /.contact-layout -->
-  </section>
-
-  <footer>
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">LUMINET ELECTRIC ENGINEERING</div>
-        <div class="footer-brand-sub">Kuala Lumpur, Malaysia</div>
-        <p class="footer-brand-desc">Professional electrical wiring, installation, CCTV, alarm systems, and renovation services delivered with precision and care.</p>
-      </div>
-      <div>
-        <div class="footer-col-title">Navigation</div>
-        <ul class="footer-links">
-          <li><a onclick="showPage('home')">Home</a></li>
-          <li><a onclick="showPage('about')">About Us</a></li>
-          <li><a onclick="showPage('services')">Services</a></li>
-          <li><a onclick="showPage('contact')">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div>
@@ -1828,88 +1324,38 @@
 </div>
 
 <script>
-  /* ── Page switching ── */
-  function showPage(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById('page-' + page).classList.add('active');
-    const navEl = document.getElementById('nav-' + page);
-    if (navEl) navEl.classList.add('active');
-    // Update mobile nav highlights
-    document.querySelectorAll('.mobile-menu a').forEach(a => a.classList.remove('active'));
-    const mobEl = document.getElementById('mob-nav-' + page);
-    if (mobEl) mobEl.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  /* ── Mobile nav ── */
-  function mobileNav(page) {
-    showPage(page);
-    closeMobileMenu();
-  }
-
   function closeMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     const burger = document.getElementById('hamburger');
-    menu.classList.remove('open');
-    burger.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
+    if (menu) menu.classList.remove('open');
+    if (burger) burger.classList.remove('open');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
-  document.getElementById('hamburger').addEventListener('click', function () {
-    const menu = document.getElementById('mobileMenu');
-    const isOpen = menu.classList.contains('open');
-    if (isOpen) {
-      closeMobileMenu();
-    } else {
-      menu.classList.add('open');
-      this.classList.add('open');
-      this.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-  });
-
-  /* Close mobile menu when tapping outside */
-  document.addEventListener('click', function (e) {
-    const menu = document.getElementById('mobileMenu');
-    const burger = document.getElementById('hamburger');
-    if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
-      closeMobileMenu();
-    }
-  });
-
-  /* ── Contact form ── */
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const btn = contactForm.querySelector('.form-submit');
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
-      try {
-        const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          document.getElementById('form-success').style.display = 'block';
-          contactForm.reset();
-          btn.textContent = 'Sent!';
-        } else {
-          alert('There was a problem. Please try again or call us directly on 012-330282.');
-          btn.disabled = false;
-          btn.textContent = 'Send Enquiry';
-        }
-      } catch (err) {
-        alert('Network error. Please try again or call us on 012-330282.');
-        btn.disabled = false;
-        btn.textContent = 'Send Enquiry';
+  const hamburger = document.getElementById('hamburger');
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      const menu = document.getElementById('mobileMenu');
+      const isOpen = menu.classList.contains('open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        menu.classList.add('open');
+        this.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
       }
     });
   }
+
+  document.addEventListener('click', function (e) {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.getElementById('hamburger');
+    if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
 </script>
 </body>
 </html>
